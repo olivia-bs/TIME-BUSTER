@@ -1,0 +1,27 @@
+/* CORES PRINCIPAIS
+    Azul: #14213D
+    Amarelo: #FCA311
+    Branco: #E5E5E5 */
+
+html, 
+body {
+    background-color: var(--color4) !important; 
+    color: var(--color3) !important;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu,
+main,
+h3,
+h4 {
+    color: var(--text-color) !important;
+}
+tbody {
+    background-color: var(--color3) !important;
+    color: var(--text-color) !important;
+}
+th {
+    background-color: var(--color2) !important;
+    color: var(--text-color) !important;
+}

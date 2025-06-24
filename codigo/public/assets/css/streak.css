@@ -1,0 +1,215 @@
+/* INÍCIO - Streaks */
+.streak {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1vw 15vw;
+    gap: 1vw;
+    margin-bottom: 0;
+    width: auto;
+    height: 80vh;
+    font-weight: bold;
+    color:#FFA300;
+}
+
+.usuario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vh;
+}
+
+.foto-usuario{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+}
+
+.nome-usuario{
+    font-size: 1.5vw;
+}
+
+.streak p{
+    display: inline;
+}
+
+i p{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.streak-atual{
+    padding: 15px;
+    text-align: center;
+    width: 50vw;
+}
+
+.streak-atual, .maior-streak, .dias-ativos{
+    background-color: var(--background-color);
+    border-radius: 80px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.streak-atual p, .maior-streak p, .dias-ativos p{
+    color: var(--color4);
+}
+
+.streak-atual i p, .maior-streak i p, .dias-ativos i p{
+    color: #FFA300;
+}
+
+.streak-atual .fa-fire , .streak-atual .fa-fire p{
+    font-size: 2.5vw;
+}
+
+.streak-atual .contagem, p{
+    font-size: 2.5vw;
+}
+
+.maior-e-ativos{
+    display: flex;
+    text-align: center;
+    margin-top: 3%;
+    gap: 3vw;
+}
+
+.maior-e-ativos i, .maior-e-ativos i p{
+    font-size: 2vw;
+}
+
+.maior-e-ativos p{
+    font-size: 2vw;
+}
+
+.dias-ativos, .maior-streak{
+    padding: 25px;
+    width: 50%;
+}
+
+.conquistas-path {
+    transition: transform 0.2s ease-in-out;
+}
+
+.conquistas-path:hover {
+    transform: scale(1.1);
+}
+
+.conquistas-path p {
+    font-size: 1.5vw;
+}
+
+/* FIM - Streak */
+
+/* INÍCIO - Conquistas */ 
+
+/* Estilos para Conquistas */
+.conquistas-container {
+  padding: 2rem;
+  width: 80%;
+  margin-left: 10vw;
+}
+
+.conquistas-container h2 {
+  color: #FFA300;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: static;
+  transform: none;
+  left: auto;
+}
+
+.conquistas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.conquista {
+  background: rgba(246, 246, 246, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+.conquista.concluida {
+  background: rgba(12, 27, 56, 0.7);
+  border: 2px solid #FFA300;
+  box-shadow: 0 0 15px rgba(255, 163, 0, 0.3);
+}
+
+.conquista.pendente {
+  opacity: 0.7;
+  filter: grayscale(30%);
+}
+
+.conquista-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #FFA300;
+  position: relative;
+}
+
+.conquista-icon .desativado {
+  color: #6c757d;
+}
+
+.badge-concluida {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #4CAF50;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.conquista h3 {
+  color: #FFA300;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.conquista p {
+  color: #F6F6F6;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.conquista small {
+  color: #adb5bd;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.progresso {
+  background: rgba(108, 117, 125, 0.2);
+  padding: 0.3rem 0;
+  border-radius: 5px;
+  text-align: center;
+  color: #adb5bd;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* Efeitos hover */
+.conquista:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.conquista.concluida:hover {
+  border-color: #4CAF50;
+}
+/* FIM - Conquistas */

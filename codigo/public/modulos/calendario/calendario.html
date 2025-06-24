@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../../assets/css/calendario.css" />
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <title>Calendario</title>
+        <script src="../../assets/js/index.js"></script>
+    </head>
+
+<body>
+    <header>
+        <div id="menu-placeholder"></div>
+        <div>
+        <img src="../../assets/images/elements/timebuster_logo.png" class="logotipo" alt="logo">
+        </div>
+        <div class="perfil-streak">
+        <i class="fa-solid fa-fire fogo-streak">&nbsp;<p class="contagem-streak">0</p></i>
+        </div>
+    </header>
+
+    <div id="overlayDia" class="overlay">
+        <div class="dia-caixa">
+            <span class="fechar" onclick="fecharPopupDia()">&times;</span>
+            <div id="conteudo-dia">
+                <!-- Conteúdo será inserido dinamicamente aqui -->
+            </div>
+        </div>
+    </div>
+
+    <div class="calendario">
+        <button id="setaVoltar" class="seta-btn">
+            ❮
+        </button>
+        <div id="calendario"></div>
+        <button id="setaAvancar" class="seta-btn">
+            ❯
+        </button>
+    </div>
+
+    <div class="container">
+        <div class="frase" id="frase">Carregando frase...</div>
+        <div class="autor" id="autor"></div>
+        <button class="refresh-btn" onclick="novaFrase()">Nova Frase</button>
+    </div>
+
+    <script src="../../assets/js/calendario.js"></script>
+    <script src="../../assets/js/frases.js"></script>
+
+</body>
+
+</html>

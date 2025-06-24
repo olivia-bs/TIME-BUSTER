@@ -1,0 +1,241 @@
+.homepage {
+  padding: 40px;
+  text-align: center;
+  color: #e5e5e5;
+}
+
+/* esse é o botão de cadastro só da homepage, é diferente dos outros botões!!*/
+.btn-cadastro#cadastro-homepage {
+  background-color: #FCA311;    
+  color: #e5e5e5;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  border-radius: 2rem;
+  padding: 1% 10%;
+}
+
+/* INICIO style do header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.logotipo{
+  width: 12vw;
+  padding: 1vw 0 0 10vw;
+}
+
+.perfil-streak {
+    display: flex;
+    align-items: center;
+    margin: 0 5%;
+}
+
+.fogo-streak {
+    color: #FFA300;
+    font-size: 3vh;
+    display: inline;
+}
+
+.fogo-streak .contagem-streak{
+display: inline;
+font-size: 3vh;
+}
+
+/* FIM style do header */
+
+/* INICIO style do filtro*/
+.filtro {
+  display: flex;
+  padding: 0 10%;
+  justify-content: end;
+  cursor: pointer;
+} 
+
+.filtro .material-symbols-outlined.ativo {
+  color: #FCA311;
+  transition: color 0.3s ease;
+}
+
+.filtro .material-symbols-outlined {
+  color: var(--color3);
+  font-size: 6vh;
+  transition: color 0.3s ease;
+}
+/* FIM style do filtro*/
+
+/* INICIO style dos cards*/
+.card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  margin: 3% 8%;
+  padding: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  background-color: var(--color3);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);  
+  border-radius: 20px;
+  padding: 15px 25px;
+  height: 17rem;
+  flex: 0 0 15rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
+}
+
+.card-checkbox {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.card-titulo {
+  color: #14213D;
+  font-family: sans-serif;
+  font-size:x-large;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.card-data {
+  margin-top: auto;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #666;
+  text-align: left;
+}
+/* FIM style dos cards*/
+
+/* INICIO style das modais*/
+.overlay {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  overflow-y: auto;
+  align-items: flex-start;
+}
+
+.form-cadastro {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 5vh;
+}
+
+.form-cadastro input {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  background-color: transparent;
+  color: #e5e5e5;
+}
+
+.cadastro-caixa {
+  display: flex;
+  flex-direction: column;
+  background: #2c354a;
+  color: #e5e5e5;
+  padding: 5% 7%;
+  margin: 5% 0;
+  border-radius: 10px;
+  width: 60%;
+  min-height: 60%;
+  position: relative;
+}
+
+.fechar {
+  cursor: pointer;
+  justify-content: end;
+  margin-left: auto;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+}
+
+#btn-concluir {
+  margin-top: auto;  
+}
+
+#detalhe-titulo {
+  text-decoration: underline;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#detalhe-descricao {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.btn-overlay {
+  background-color: #FCA311;    
+  color: #e5e5e5;
+  border: none;
+  cursor: pointer;
+  font-weight: 800;
+  border-radius: 2rem;
+  padding: 1% 10%;
+}
+/* FIM style das modais*/
+
+/* INICIO style do carrossel*/
+.carrossel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrossel-btn {
+  background: none;
+  color: var(--color3);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carrossel-btn.esquerda{
+  margin-left: 7%;
+}
+
+.carrossel-btn.direita{
+  margin-right: 7%;
+}
+
+/* FIM style do carrossel*/

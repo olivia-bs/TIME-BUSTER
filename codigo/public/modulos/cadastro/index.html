@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerenciador de Tarefas</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=filter_list" />
+  <!-- Link para o CSS externo -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <div id="menu-placeholder"></div>
+    <div>
+      <img src="../../assets/images/elements/timebuster_logo.png" class="logotipo" alt="logo">
+    </div>
+    <div class="perfil-streak">
+      <i class="fa-solid fa-fire fogo-streak">&nbsp;<p class="contagem-streak">0</p></i>
+    </div>
+  </header>
+
+  <!-- Página principal -->
+  <div class="homepage">
+    <div class="filtro">
+      <span class="material-symbols-outlined" title="Ordenar por data" id="filtro-icon"
+        onclick="alternarOrdenacao()">filter_list</span>
+    </div>
+    <!-- Carrossel de cards de tarefas -->
+    <div class="carrossel">
+      <!-- Botão de rolagem para a esquerda -->
+      <button class="carrossel-btn esquerda" onclick="scrollCards(-1)">❮</button>
+
+      <!-- Container onde os cards de tarefas são adicionados dinamicamente -->
+      <div class="card-container" id="cards-container"></div>
+
+      <!-- Botão de rolagem para a direita -->
+      <button class="carrossel-btn direita" onclick="scrollCards(1)">❯</button>
+    </div>
+
+    <!-- Botão para abrir o modal de cadastro -->
+    <button class="btn-cadastro" id="cadastro-homepage" onclick="abrirCadastro()">ADICIONAR +</button>
+  </div>
+
+  <!-- Modal para cadastro de tarefa -->
+  <div id="overlayCadastro" class="overlay">
+    <div class="cadastro-caixa">
+      <!-- Botão para fechar o modal -->
+      <span class="fechar" onclick="fecharCadastro()">&times;</span>
+      <h2>Novo Cadastro</h2>
+      <!-- Formulário para adicionar tarefa -->
+      <form class="form-cadastro" onsubmit="salvarCadastro(event)">
+        <section class="cadastro-titulo-data">
+          <input type="text" id="titulo" placeholder="Titulo" required><br><br>
+          <input type="date" id="data" name="data" required>
+        </section>
+        <input type="text" id="descricao" class="descricao" placeholder="Descrição">
+        <button type="submit" id="btn-concluir" class="btn-overlay">CONCLUIR</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal para visualizar os detalhes de uma tarefa -->
+  <div id="overlayDetalhes" class="overlay">
+    <div class="cadastro-caixa">
+      <!-- Botão para fechar o modal -->
+      <span class="fechar" onclick="fecharDetalhes()">&times;</span>
+      <section class="detalhe-titulo-data">
+        <!-- Título e data da tarefa selecionada -->
+        <p id="detalhe-titulo"></p>
+        <p id="detalhe-data"></p>
+      </section>
+      <!-- Descrição da tarefa -->
+      <p id="detalhe-descricao"></p>
+      <section class="botoes">
+        <!-- Checkbox para marcar como completa -->
+        <input type="checkbox" id="detalhe-checkbox">
+        <!-- Botão para apagar a tarefa -->
+        <button id="btn-apagar" class="btn-overlay">APAGAR</button>
+      </section>
+    </div>
+  </div>
+
+  <!-- Script principal do site -->
+  <script src="../../assets/js/index.js"></script>
+</body>
+
+</html>
